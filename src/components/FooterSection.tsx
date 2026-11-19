@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
-import { GununganWayang, JasmineDivider } from './ornaments/JavaneseOrnaments';
+import { GununganWayang, JasmineDivider, AksaraJawaBadge, BatikBorder } from './ornaments/JavaneseOrnaments';
 
 // Dedicated crisp SVGs for Instagram and WhatsApp
 const InstagramIcon: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
@@ -23,7 +23,10 @@ export const FooterSection: React.FC = () => {
   const whatsappUrl = 'https://wa.me/6285854664914';
 
   return (
-    <footer className="relative w-full pt-10 pb-20 px-6 flex flex-col items-center text-center bg-gradient-to-b from-[#F5EFE6] to-[#FAF6F0] border-t border-[#B08968]/30">
+    <footer className="relative w-full pt-8 pb-20 px-6 flex flex-col items-center text-center bg-gradient-to-b from-[#F5EFE6] to-[#FAF6F0] border-t border-[#B08968]/30">
+      {/* Pita Batik Atas Footer */}
+      <BatikBorder className="mb-4 opacity-50" />
+
       <div className="z-10 w-full max-w-[360px] flex flex-col items-center">
         {/* Gunungan Silhouette */}
         <motion.div
@@ -48,9 +51,9 @@ export const FooterSection: React.FC = () => {
             berkenan hadir dan memberikan doa restu kepada Bidan Siti Rochma.
           </p>
 
-          <p className="font-serif italic text-xs text-[#B08968] mt-3">
-            Matur Nuwun Sanget
-          </p>
+          {/* Kaligrafi Aksara Jawa Matur Nuwun */}
+          <AksaraJawaBadge type="matur-nuwun" className="my-3" />
+
           <p className="font-serif italic text-xs text-[#B08968]">
             Wassalamu’alaikum Warahmatullahi Wabarakatuh
           </p>

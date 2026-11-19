@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
-import { JasmineDivider, CornerOrnament } from './ornaments/JavaneseOrnaments';
+import { JasmineDivider, CornerOrnament, JogloCrown } from './ornaments/JavaneseOrnaments';
 
 interface PhotoItem {
   id: number;
@@ -49,6 +49,7 @@ export const GallerySection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
+          <JogloCrown width={85} className="mb-1 opacity-80" />
           <span className="text-[11px] font-sans tracking-[0.2em] text-[#B08968] font-semibold uppercase">
             Dokumentasi & Kenangan
           </span>

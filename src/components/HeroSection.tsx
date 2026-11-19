@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock } from 'lucide-react';
-import { JanurCorner, JasmineDivider } from './ornaments/JavaneseOrnaments';
+import { JanurCorner, JasmineDivider, RonceMelatiGarland, BatikBorder } from './ornaments/JavaneseOrnaments';
 import { CountdownTimer } from './CountdownTimer';
 
 export const HeroSection: React.FC = () => {
@@ -18,10 +18,14 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[84dvh] sm:min-h-[86dvh] pt-16 pb-6 px-6 flex flex-col justify-center items-center text-center overflow-hidden bg-gradient-to-b from-[#FAF6F0] via-[#F5EFE6] to-[#FAF6F0]">
+    <section className="relative w-full min-h-[84dvh] sm:min-h-[86dvh] pt-16 pb-4 px-6 flex flex-col justify-center items-center text-center overflow-hidden bg-gradient-to-b from-[#FAF6F0] via-[#F5EFE6] to-[#FAF6F0]">
       {/* Ornamen Janur Kuning Melengkung di Kiri & Kanan Atas */}
       <JanurCorner position="left" />
       <JanurCorner position="right" />
+
+      {/* Untaian Ronce Melati Menggantung di Sisi Kiri & Kanan */}
+      <RonceMelatiGarland position="left" length={6} className="top-24 hidden sm:flex" />
+      <RonceMelatiGarland position="right" length={6} className="top-24 hidden sm:flex" />
 
       {/* Decorative Top Subtitle */}
       <motion.div
@@ -106,7 +110,7 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Button Tambah ke Google Calendar */}
-        <div className="mt-3 mb-1">
+        <div className="mt-3 mb-2">
           <a
             href={createGoogleCalendarLink()}
             target="_blank"
@@ -118,6 +122,11 @@ export const HeroSection: React.FC = () => {
           </a>
         </div>
       </motion.div>
+
+      {/* Pita Batik Pembatas Transisi ke Sambutan */}
+      <div className="w-full max-w-[340px] mt-2">
+        <BatikBorder />
+      </div>
     </section>
   );
 };

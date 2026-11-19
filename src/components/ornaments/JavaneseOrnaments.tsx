@@ -248,3 +248,179 @@ export const GebyokDivider: React.FC<{ className?: string }> = ({ className = ''
     </div>
   );
 };
+
+// ==========================================
+// KOMPONEN JAWA BARU (PENGAYAAN TRADISIONAL)
+// ==========================================
+
+// 1. Pita Pembatas Motif Batik Kawung & Parang Seling
+export const BatikBorder: React.FC<{ className?: string }> = ({ className = '' }) => {
+  return (
+    <div className={`w-full overflow-hidden py-1.5 flex justify-center items-center select-none ${className}`}>
+      <svg
+        viewBox="0 0 400 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full max-w-[400px] h-4 opacity-75"
+        preserveAspectRatio="repeat"
+      >
+        <pattern id="batikPattern" width="40" height="16" patternUnits="userSpaceOnUse">
+          {/* Garis batas atas & bawah tipis */}
+          <line x1="0" y1="1" x2="40" y2="1" stroke="#B08968" strokeWidth="1" strokeDasharray="3 1" />
+          <line x1="0" y1="15" x2="40" y2="15" stroke="#B08968" strokeWidth="1" strokeDasharray="3 1" />
+
+          {/* Motif Parang Seling miring */}
+          <path d="M 2 14 L 14 2 M 6 14 L 18 2" stroke="#4A2E1B" strokeWidth="1.2" strokeLinecap="round" />
+          <circle cx="10" cy="8" r="1.5" fill="#D4AF37" />
+
+          {/* Motif Kawung 4 Daun Tengah */}
+          <ellipse cx="26" cy="4" rx="3.5" ry="2" fill="#D4AF37" opacity="0.85" />
+          <ellipse cx="26" cy="12" rx="3.5" ry="2" fill="#D4AF37" opacity="0.85" />
+          <ellipse cx="22" cy="8" rx="2" ry="3.5" fill="#B08968" opacity="0.85" />
+          <ellipse cx="30" cy="8" rx="2" ry="3.5" fill="#B08968" opacity="0.85" />
+          <circle cx="26" cy="8" r="1.2" fill="#4A2E1B" />
+
+          {/* Titik pembatas */}
+          <circle cx="38" cy="8" r="1" fill="#B08968" />
+        </pattern>
+        <rect width="400" height="16" fill="url(#batikPattern)" />
+      </svg>
+    </div>
+  );
+};
+
+// 2. Kaligrafi Aksara Jawa Berbingkai Estetis
+export const AksaraJawaBadge: React.FC<{
+  type: 'sugeng-rawuh' | 'matur-nuwun';
+  className?: string;
+}> = ({ type, className = '' }) => {
+  const isSugeng = type === 'sugeng-rawuh';
+  const aksaraText = isSugeng ? 'ꦱꦸꦒꦼꦁꦫꦮꦸꦃ' : 'ꦩꦠꦸꦂꦤꦸꦮꦸꦤ꧀';
+  const latinText = isSugeng ? 'Sugeng Rawuh' : 'Matur Nuwun';
+
+  return (
+    <div className={`flex flex-col items-center justify-center select-none ${className}`}>
+      <div className="flex items-center gap-2">
+        <div className="h-[1px] w-6 bg-gradient-to-r from-transparent to-[#D4AF37]" />
+        <span className="font-serif text-sm tracking-widest text-[#4A2E1B] font-semibold opacity-90 px-1">
+          {aksaraText}
+        </span>
+        <div className="h-[1px] w-6 bg-gradient-to-l from-transparent to-[#D4AF37]" />
+      </div>
+      <span className="text-[10px] font-sans font-medium tracking-[0.25em] text-[#B08968] uppercase -mt-0.5">
+        {latinText}
+      </span>
+    </div>
+  );
+};
+
+// 3. Ornamen Mahkota Joglo / Gapura Atap Ukir Jawa
+export const JogloCrown: React.FC<{ className?: string; width?: number }> = ({ className = '', width = 120 }) => {
+  return (
+    <div className={`flex justify-center items-center ${className}`}>
+      <svg
+        viewBox="0 0 160 36"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ width: `${width}px`, height: `${(width * 36) / 160}px` }}
+      >
+        {/* Atap Brunjung Joglo */}
+        <path
+          d="M 80 2 L 68 14 L 30 18 L 10 28 L 80 22 L 150 28 L 130 18 L 92 14 Z"
+          fill="#4A2E1B"
+          stroke="#D4AF37"
+          strokeWidth="1.2"
+        />
+        {/* Lambang Sari / Puncak Mahkota Emas */}
+        <path
+          d="M 80 2 L 77 8 L 80 12 L 83 8 Z"
+          fill="#E5C158"
+        />
+        <circle cx="80" cy="1" r="2" fill="#D4AF37" />
+        {/* Sulur sayap kiri & kanan */}
+        <path
+          d="M 10 28 C 18 24 24 28 32 26 C 24 28 18 32 10 28 Z"
+          fill="#D4AF37"
+        />
+        <path
+          d="M 150 28 C 142 24 136 28 128 26 C 136 28 142 32 150 28 Z"
+          fill="#D4AF37"
+        />
+        {/* Untaian gantung tengah kecil */}
+        <circle cx="80" cy="27" r="1.8" fill="#D4AF37" />
+        <circle cx="80" cy="32" r="1.2" fill="#B08968" />
+      </svg>
+    </div>
+  );
+};
+
+// 4. Untaian Ronce Bunga Melati Gantung (Melati Manten / Tasyakuran)
+export const RonceMelatiGarland: React.FC<{
+  position: 'left' | 'right';
+  className?: string;
+  length?: number;
+}> = ({ position, className = '', length = 5 }) => {
+  const isLeft = position === 'left';
+  const nodes = Array.from({ length });
+
+  return (
+    <div
+      className={`absolute top-0 ${isLeft ? 'left-3 sm:left-4' : 'right-3 sm:right-4'} flex flex-col items-center pointer-events-none z-10 opacity-80 ${className}`}
+    >
+      {/* Tali gantung awal */}
+      <div className="w-[1px] h-3 bg-[#B08968]" />
+      
+      {/* Untaian Kuntum Melati Bertingkat */}
+      {nodes.map((_, i) => (
+        <React.Fragment key={i}>
+          <div className="w-2.5 h-2.5 rounded-full bg-[#FAF6F0] border border-[#D4AF37] shadow-xs flex items-center justify-center my-[2px]">
+            <div className="w-1 h-1 rounded-full bg-[#D4AF37]" />
+          </div>
+          {i < nodes.length - 1 && <div className="w-[1px] h-2 bg-[#B08968]/70" />}
+        </React.Fragment>
+      ))}
+
+      {/* Kuncup Bunga Kantil di Ujung Bawah */}
+      <div className="w-[1px] h-2.5 bg-[#D4AF37]" />
+      <svg width="8" height="14" viewBox="0 0 10 18" fill="none">
+        <path d="M 5 0 C 8 4 9 10 5 18 C 1 10 2 4 5 0 Z" fill="#E5C158" stroke="#B08968" strokeWidth="0.8" />
+      </svg>
+    </div>
+  );
+};
+
+// 5. Siluet Wayang Kulit Halus (Tokoh Pewayangan Jawa)
+export const WayangSilhouette: React.FC<{
+  side: 'left' | 'right';
+  className?: string;
+}> = ({ side, className = '' }) => {
+  const isLeft = side === 'left';
+
+  return (
+    <div className={`pointer-events-none select-none opacity-[0.06] ${className}`}>
+      <svg
+        viewBox="0 0 120 220"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        className={`w-28 h-52 text-[#4A2E1B] ${isLeft ? '' : 'scale-x-[-1]'}`}
+      >
+        {/* Mahkota / Jamang Wayang */}
+        <path d="M 60 10 C 65 2 75 8 72 20 C 70 28 65 32 55 35 Z" />
+        <path d="M 55 35 C 50 30 52 24 60 22 Z" />
+        {/* Profil Muka Halus Wayang Purwa */}
+        <path d="M 55 35 L 72 45 L 68 52 L 60 52 L 58 58 L 52 56 L 50 50 Z" />
+        {/* Sumping / Hiasan Telinga */}
+        <circle cx="48" cy="48" r="4" />
+        {/* Leher & Bahu */}
+        <path d="M 52 56 C 45 65 38 78 40 92 L 60 88 C 62 76 60 65 52 56 Z" />
+        {/* Tangan Wayang Melengkung Luwes */}
+        <path d="M 40 92 C 28 110 20 135 24 150 C 27 150 32 142 34 130 C 36 118 42 105 45 95 Z" />
+        {/* Badan & Dodot / Kain Jarik Wayang */}
+        <path d="M 50 90 C 52 110 48 135 45 160 C 55 170 65 175 75 165 C 68 140 65 115 62 90 Z" />
+        {/* Celana / Uncal Kencana Wayang */}
+        <path d="M 45 160 L 40 200 L 52 205 L 56 168 Z" />
+        <path d="M 65 165 L 68 200 L 78 202 L 72 165 Z" />
+      </svg>
+    </div>
+  );
+};
