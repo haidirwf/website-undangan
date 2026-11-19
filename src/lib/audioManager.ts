@@ -8,8 +8,8 @@ class AudioManager {
   private listeners: ((playing: boolean) => void)[] = [];
 
   constructor() {
-    // Musik Gamelan Jawa Asli (Kraton Ngayogyakarta Hadiningrat) yang di-bundle lokal
-    this.audioEl = new Audio('/audio/gamelan-jawa.mp3');
+    // Musik Gamelan Pamungkas (TATANX - Gendhing Gamelan Pamungkas)
+    this.audioEl = new Audio('/audio/gamelan-pamungkas.mp3');
     this.audioEl.loop = true;
     this.audioEl.volume = 0.55;
   }
