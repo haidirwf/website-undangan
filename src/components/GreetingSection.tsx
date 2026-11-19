@@ -33,7 +33,7 @@ export const GreetingSection: React.FC = () => {
         {/* Teks Sambutan Silaturahmi */}
         <p className="font-lora text-xs sm:text-sm text-[#2C1A0E] leading-relaxed text-center px-1">
           Tanpa terasa waktu bergulir dan untaian kenangan indah di Mutiara Bunda tetap lekat di sanubari kita.
-          Dengan rasa syukur dan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i sekalian keluarga besar
+          Dengan rasa syukur dan penuh kebahagiaan, kami mengundang Ibu/Saudara/i sekalian keluarga besar
           Alumni Mutiara Bunda untuk hadir mempererat tali silaturahmi dalam peringatan Ulang Tahun & Reuni Bersama
           <strong className="text-[#4A2E1B] font-semibold"> Bidan Hj Siti Rochma</strong>.
         </p>
@@ -41,7 +41,7 @@ export const GreetingSection: React.FC = () => {
         {/* Catatan Tidak Menerima Hadiah */}
         <div className="mt-5 p-3 rounded-xl bg-[#FAF6F0] border border-[#B08968]/30 shadow-xs">
           <p className="font-lora text-[11px] sm:text-xs text-[#2C1A0E]/85 leading-relaxed">
-            * Tanpa mengurangi rasa hormat, kami <strong className="text-[#4A2E1B]">tidak menerima hadiah dalam bentuk apapun</strong>. Kehadiran serta doa restu Bapak/Ibu/Saudara/i merupakan kado terindah bagi kami.
+            * Tanpa mengurangi rasa hormat, kami <strong className="text-[#4A2E1B]">tidak menerima hadiah dalam bentuk apapun</strong>. Kehadiran serta doa restu Ibu/Saudara/i merupakan kado terindah bagi kami.
           </p>
         </div>
       </motion.div>

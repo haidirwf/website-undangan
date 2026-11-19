@@ -90,7 +90,7 @@ export const CoverOverlay: React.FC<CoverOverlayProps> = ({ isOpen, onOpen, gues
         {/* Box Nama Tamu Dinamis */}
         <div className="w-full max-w-[310px] bg-[#FAF6F0]/90 border border-[#B08968]/50 rounded-xl p-4 shadow-sm mt-2">
           <p className="text-[11px] font-sans uppercase tracking-wider text-[#4A2E1B]/70">
-            Kepada Yth. Bapak/Ibu/Saudara/i:
+            Kepada Yth. Ibu/Saudara/i:
           </p>
           <p className="font-serif text-lg font-bold text-[#4A2E1B] mt-1 break-words">
             {guestName}

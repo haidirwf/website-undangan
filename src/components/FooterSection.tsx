@@ -44,7 +44,7 @@ export const FooterSection: React.FC = () => {
           className="mt-3"
         >
           <p className="font-lora text-xs text-[#2C1A0E]/80 leading-relaxed">
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Ibu/Saudara/i
             berkenan hadir dan memberikan doa restu kepada Bidan Hj Siti Rochma.
           </p>
 

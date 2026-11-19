@@ -139,7 +139,7 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ initialGuestName = '' 
           </h2>
           <JasmineDivider className="my-3" />
           <p className="font-lora text-xs text-[#2C1A0E]/75 px-2">
-            Mohon kesediaan Bapak/Ibu/Saudara/i untuk mengonfirmasi kehadiran demi kelancaran jamuan kami.
+            Mohon kesediaan Ibu/Saudara/i untuk mengonfirmasi kehadiran demi kelancaran jamuan kami.
           </p>
         </motion.div>
 
