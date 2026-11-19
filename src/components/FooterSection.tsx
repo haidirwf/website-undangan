@@ -45,7 +45,11 @@ export const FooterSection: React.FC = () => {
         >
           <p className="font-lora text-xs text-[#2C1A0E]/80 leading-relaxed">
             Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
-            berkenan hadir dan memberikan doa restu kepada Bidan Siti Rochma.
+            berkenan hadir dan memberikan doa restu kepada Bidan Hj Siti Rochma.
+          </p>
+
+          <p className="font-lora text-[11px] text-[#B08968] font-medium mt-2 italic">
+            (Tanpa mengurangi rasa hormat, kami tidak menerima hadiah dalam bentuk apapun)
           </p>
 
           <p className="font-serif italic text-xs text-[#B08968] mt-3">
@@ -60,7 +64,7 @@ export const FooterSection: React.FC = () => {
           {/* Tokoh & Keluarga Besar */}
           <div className="my-2">
             <p className="font-script text-3xl text-[#4A2E1B]">
-              Bidan Siti Rochma
+              Bidan Hj Siti Rochma
             </p>
             <p className="font-serif text-xs font-semibold text-[#B08968] tracking-widest uppercase mt-0.5">
               & Keluarga Besar Mutiara Bunda
@@ -85,7 +89,7 @@ export const FooterSection: React.FC = () => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="WhatsApp Bidan Siti Rochma"
+              aria-label="WhatsApp Bidan Hj Siti Rochma"
               className="w-10 h-10 rounded-full bg-[#4A2E1B] text-[#E5C158] flex items-center justify-center hover:scale-110 active:scale-95 transition-all shadow-md border border-[#D4AF37]/50"
             >
               <WhatsAppIcon className="w-4 h-4" />

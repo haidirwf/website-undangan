@@ -9,8 +9,8 @@ export const HeroSection: React.FC = () => {
 
   // Google Calendar URL generator
   const createGoogleCalendarLink = () => {
-    const title = encodeURIComponent('Ulang Tahun & Reuni Alumni Mutiara Bunda (Bidan Siti Rochma)');
-    const details = encodeURIComponent('Agenda: Temu Kangen, Makan-makan & Ramah Tamah, Doorprize, dan Pembagian Souvenir.');
+    const title = encodeURIComponent('Ulang Tahun & Reuni Alumni Mutiara Bunda (Bidan Hj Siti Rochma)');
+    const details = encodeURIComponent('Agenda: Registrasi & Temu Kangen, Makan-makan & Ramah Tamah, Doorprize, dan Pembagian Souvenir.');
     const location = encodeURIComponent('Cluster Padova Bawah, Villa Mutiara Cikarang 2 Blok H2 No. 21');
     const start = '20261213T020000Z'; // 09:00 WIB is 02:00 UTC
     const end = '20261213T070000Z';
@@ -36,7 +36,7 @@ export const HeroSection: React.FC = () => {
         </span>
       </motion.div>
 
-      {/* Frame Foto Placeholder Adat Jawa (Bingkai Oval / Lengkung Jawa, nuansa sepia) */}
+      {/* Frame Foto Bidan Hj Siti Rochma (Bingkai Medali Emas Adat Jawa) */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -44,21 +44,21 @@ export const HeroSection: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="relative my-4 z-10"
       >
-        <div className="relative w-40 h-52 mx-auto p-2 rounded-t-[84px] rounded-b-[36px] border-2 border-[#D4AF37] bg-[#FAF6F0] shadow-xl shadow-[#4A2E1B]/15">
+        <div className="relative w-44 h-44 mx-auto p-2 rounded-full border-2 border-[#D4AF37] bg-[#FAF6F0] shadow-xl shadow-[#4A2E1B]/15">
           {/* Inner frame */}
-          <div className="w-full h-full rounded-t-[78px] rounded-b-[30px] overflow-hidden border border-[#B08968]/60 relative">
+          <div className="w-full h-full rounded-full overflow-hidden border border-[#B08968]/60 relative bg-[#FAF6F0]">
             <img
-              src="https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?q=80&w=600&auto=format&fit=crop"
-              alt="Foto Adat Jawa - Bidan Siti Rochma"
-              className="w-full h-full object-cover sepia-[0.35] contrast-105 hover:scale-105 transition-transform duration-700"
+              src="/favicon.webp"
+              alt="Bidan Hj Siti Rochma - Mutiara Bunda"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
             {/* Soft Warm Vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#4A2E1B]/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#4A2E1B]/15 via-transparent to-transparent pointer-events-none" />
           </div>
 
           {/* Golden Badge Ornament */}
-          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#4A2E1B] text-[#E5C158] border border-[#D4AF37] px-3 py-0.5 rounded-full text-[10px] font-serif shadow-md whitespace-nowrap">
+          <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-[#4A2E1B] text-[#E5C158] border border-[#D4AF37] px-3.5 py-0.5 rounded-full text-[10px] font-serif shadow-md whitespace-nowrap">
             Mutiara Bunda
           </div>
         </div>
@@ -80,7 +80,7 @@ export const HeroSection: React.FC = () => {
         </p>
 
         <p className="font-script text-4xl text-[#4A2E1B] mt-2 mb-1">
-          Bidan Siti Rochma
+          Bidan Hj Siti Rochma
         </p>
 
         <JasmineDivider className="my-2.5" />

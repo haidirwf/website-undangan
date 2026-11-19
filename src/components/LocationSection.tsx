@@ -4,7 +4,7 @@ import { MapPin, Navigation, Compass } from 'lucide-react';
 import { JasmineDivider, CornerOrnament } from './ornaments/JavaneseOrnaments';
 
 export const LocationSection: React.FC = () => {
-  const venueName = 'Kediaman Bidan Siti Rochma';
+  const venueName = 'Kediaman Bidan Hj Siti Rochma';
   const venueAddress = 'Cluster Padova Bawah, Villa Mutiara Cikarang 2 Blok H2 No. 21, Sukasejati, Cikarang Selatan, Bekasi, Jawa Barat';
   const mapsSearchQuery = encodeURIComponent('Cluster Padova Bawah, Villa Mutiara Cikarang 2 Blok H2 No. 21, Sukasejati, Cikarang Selatan, Bekasi');
   const mapsDirectUrl = `https://www.google.com/maps/search/?api=1&query=${mapsSearchQuery}`;

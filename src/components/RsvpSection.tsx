@@ -248,7 +248,7 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ initialGuestName = '' 
               rows={3}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Tuliskan ucapan selamat ulang tahun atau doa untuk Bidan Siti Rochma & Mutiara Bunda..."
+              placeholder="Tuliskan ucapan selamat ulang tahun atau doa untuk Bidan Hj Siti Rochma & Mutiara Bunda..."
               className="w-full px-3.5 py-2.5 rounded-xl border border-[#B08968]/40 bg-[#F5EFE6] text-xs font-sans text-[#2C1A0E] focus:outline-none focus:border-[#4A2E1B] focus:ring-1 focus:ring-[#4A2E1B] transition-colors resize-none"
             />
           </div>

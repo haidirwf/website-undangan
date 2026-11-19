@@ -55,10 +55,7 @@ export const GallerySection: React.FC = () => {
           <h2 className="font-serif text-2xl font-bold text-[#4A2E1B] mt-1">
             Galeri Suasana
           </h2>
-          <JasmineDivider className="my-3" />
-          <p className="font-lora text-xs text-[#2C1A0E]/70 mb-6">
-            Momen kebersamaan dan keindahan adat Jawa yang penuh kehangatan.
-          </p>
+          <JasmineDivider className="mt-3 mb-6" />
         </motion.div>
 
         {/* 2-Column Photo Grid */}

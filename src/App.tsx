@@ -3,8 +3,10 @@ import { CoverOverlay } from './components/CoverOverlay';
 import { HeroSection } from './components/HeroSection';
 import { GreetingSection } from './components/GreetingSection';
 import { RundownSection } from './components/RundownSection';
+import { DresscodeSection } from './components/DresscodeSection';
 import { GallerySection } from './components/GallerySection';
 import { LocationSection } from './components/LocationSection';
+import { GiftSection } from './components/GiftSection';
 import { RsvpSection } from './components/RsvpSection';
 import { FooterSection } from './components/FooterSection';
 
@@ -83,11 +85,17 @@ export const App: React.FC = () => {
         {/* Rundown / Rangkaian Acara */}
         <RundownSection />
 
+        {/* Tata Busana / Dress Code Jawa */}
+        <DresscodeSection />
+
         {/* Galeri Foto */}
         <GallerySection />
 
         {/* Lokasi Acara (Google Maps) */}
         <LocationSection />
+
+        {/* Pemberitahuan Tanda Kasih / Hadiah */}
+        <GiftSection />
 
         {/* Konfirmasi Kehadiran (RSVP) & Ucapan */}
         <RsvpSection initialGuestName={guestName !== 'Tamu Undangan' ? guestName : ''} />

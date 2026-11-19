@@ -16,15 +16,15 @@ export const RundownSection: React.FC = () => {
     {
       id: '1',
       time: '09.00 – 10.00 WIB',
-      title: 'Temu Kangen & Registrasi',
-      description: 'Penyambutan tamu undangan, pengisian buku tamu, dan sesi temu kangen awal.',
+      title: 'Registrasi & Temu Kangen',
+      description: 'Pengisian buku tamu, penyambutan tamu undangan, dan sesi temu kangen awal.',
       icon: <Users className="w-4 h-4 text-[#D4AF37]" />,
     },
     {
       id: '2',
       time: '10.00 – 11.30 WIB',
       title: 'Makan-makan & Ramah Tamah',
-      description: 'Doa bersama, sambutan Bidan Siti Rochma, pemotongan tumpeng, dan santap hidangan prasmanan khas Jawa.',
+      description: 'Doa bersama, sambutan Bidan Hj Siti Rochma, pemotongan tumpeng, dan santap hidangan prasmanan khas Jawa.',
       icon: <Utensils className="w-4 h-4 text-[#D4AF37]" />,
     },
     {
