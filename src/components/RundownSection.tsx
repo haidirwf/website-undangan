@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Utensils, Gift, Award, Users } from 'lucide-react';
-import { JasmineDivider, GebyokDivider, JogloCrown, BatikBorder } from './ornaments/JavaneseOrnaments';
+import { JasmineDivider, GebyokDivider } from './ornaments/JavaneseOrnaments';
 
 interface EventItem {
   id: string;
@@ -77,9 +77,6 @@ export const RundownSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Mahkota Joglo */}
-          <JogloCrown width={90} className="mb-1 opacity-80" />
-
           <span className="text-[11px] font-sans tracking-[0.2em] text-[#B08968] font-semibold uppercase">
             Rangkaian Acara
           </span>
@@ -133,7 +130,6 @@ export const RundownSection: React.FC = () => {
         </div>
 
         <GebyokDivider className="mt-8" />
-        <BatikBorder className="mt-3 opacity-60" />
       </div>
     </section>
   );

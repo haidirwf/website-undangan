@@ -1,21 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GununganWayang, JasmineDivider, JogloCrown, WayangSilhouette } from './ornaments/JavaneseOrnaments';
+import { GununganWayang, JasmineDivider } from './ornaments/JavaneseOrnaments';
 
 export const GreetingSection: React.FC = () => {
   return (
-    <section className="relative w-full pt-10 pb-12 px-6 flex flex-col items-center text-center bg-[#F5EFE6] border-t-2 border-[#D4AF37]/40 border-b border-[#B08968]/20 shadow-inner overflow-hidden">
+    <section className="relative w-full pt-10 pb-12 px-6 flex flex-col items-center text-center bg-[#F5EFE6] border-t-2 border-[#D4AF37]/40 border-b border-[#B08968]/20 shadow-inner">
       {/* Background Watermark Gunungan Halus */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.035] pointer-events-none">
         <GununganWayang className="w-80 h-96" />
-      </div>
-
-      {/* Siluet Wayang Halus di Tepi Kiri & Kanan */}
-      <div className="absolute -left-6 top-1/2 -translate-y-1/2 pointer-events-none">
-        <WayangSilhouette side="left" />
-      </div>
-      <div className="absolute -right-6 top-1/2 -translate-y-1/2 pointer-events-none">
-        <WayangSilhouette side="right" />
       </div>
 
       <motion.div
@@ -25,9 +17,6 @@ export const GreetingSection: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="z-10 w-full max-w-[370px]"
       >
-        {/* Mahkota Joglo Di Atas Sambutan */}
-        <JogloCrown width={100} className="mb-2 opacity-85" />
-
         {/* Salam Pembuka Tradisional / Islami */}
         <p className="font-serif italic text-sm text-[#B08968] tracking-wide mb-1">
           Assalamu’alaikum Warahmatullahi Wabarakatuh

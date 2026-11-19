@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MailOpen } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { GununganWayang, CornerOrnament, JasmineDivider, AksaraJawaBadge, BatikBorder } from './ornaments/JavaneseOrnaments';
+import { GununganWayang, CornerOrnament, JasmineDivider } from './ornaments/JavaneseOrnaments';
 
 interface CoverOverlayProps {
   isOpen: boolean;
@@ -117,17 +117,14 @@ export const CoverOverlay: React.FC<CoverOverlayProps> = ({ isOpen, onOpen, gues
                 Bidan Siti Rochma
               </motion.p>
 
-              <JasmineDivider className="my-2.5" />
-
-              {/* Aksara Jawa Sugeng Rawuh */}
-              <AksaraJawaBadge type="sugeng-rawuh" className="mb-2" />
+              <JasmineDivider className="my-3" />
 
               {/* Box Nama Tamu Dinamis */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.85, duration: 0.7 }}
-                className="w-full max-w-[310px] bg-[#FAF6F0]/90 border border-[#B08968]/50 rounded-xl p-3.5 shadow-sm mt-1"
+                className="w-full max-w-[310px] bg-[#FAF6F0]/90 border border-[#B08968]/50 rounded-xl p-4 shadow-sm mt-2"
               >
                 <p className="text-[11px] font-sans uppercase tracking-wider text-[#4A2E1B]/70">
                   Kepada Yth. Bapak/Ibu/Saudara/i:
@@ -141,14 +138,13 @@ export const CoverOverlay: React.FC<CoverOverlayProps> = ({ isOpen, onOpen, gues
               </motion.div>
             </div>
 
-            {/* Bottom Button & Batik Border */}
+            {/* Bottom Button */}
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
-              className="mb-4 z-10 w-full max-w-[300px] flex flex-col items-center"
+              className="mb-6 z-10 w-full max-w-[280px]"
             >
-              <BatikBorder className="mb-3 opacity-60" />
               <button
                 onClick={handleOpenInvitation}
                 className="group relative w-full flex items-center justify-center gap-2.5 bg-[#4A2E1B] hover:bg-[#351F11] text-[#F5EFE6] px-6 py-3.5 rounded-full font-serif text-sm font-semibold tracking-wider shadow-lg shadow-[#4A2E1B]/30 hover:shadow-xl transition-all duration-300 active:scale-95 border border-[#D4AF37]/50"
