@@ -8,10 +8,10 @@ class AudioManager {
   private listeners: ((playing: boolean) => void)[] = [];
 
   constructor() {
-    // Soft traditional royalty-free gamelan audio URL
-    this.audioEl = new Audio('https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=traditional-asian-gamelan-ambient-112191.mp3');
+    // Musik Gamelan Jawa Asli (Kraton Ngayogyakarta Hadiningrat) yang di-bundle lokal
+    this.audioEl = new Audio('/audio/gamelan-jawa.mp3');
     this.audioEl.loop = true;
-    this.audioEl.volume = 0.45;
+    this.audioEl.volume = 0.55;
   }
 
   public subscribe(cb: (playing: boolean) => void) {

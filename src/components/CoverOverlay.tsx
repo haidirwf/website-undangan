@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MailOpen } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { GununganWayang, CornerOrnament, JasmineDivider } from './ornaments/JavaneseOrnaments';
+import { globalAudio } from '../lib/audioManager';
 
 interface CoverOverlayProps {
   isOpen: boolean;
@@ -14,6 +15,9 @@ export const CoverOverlay: React.FC<CoverOverlayProps> = ({ isOpen, onOpen, gues
   const handleOpenInvitation = () => {
     // Pastikan posisi scroll berada di puncak paling atas
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Mulai putar musik gamelan Jawa
+    globalAudio.play().catch(() => {});
 
     // Launch festive gold confetti
     try {

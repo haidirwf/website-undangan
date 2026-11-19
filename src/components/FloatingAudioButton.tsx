@@ -17,18 +17,19 @@ export const FloatingAudioButton: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-40">
+    <div className="fixed bottom-5 right-5 sm:right-[max(1.25rem,calc(50vw-200px))] z-40">
       <button
         onClick={handleToggle}
-        aria-label={isPlaying ? 'Hentikan Musik' : 'Putar Musik'}
+        aria-label={isPlaying ? 'Hentikan Musik Gamelan' : 'Putar Musik Gamelan'}
+        title={isPlaying ? 'Hentikan Musik Gamelan' : 'Putar Musik Gamelan'}
         className={`relative w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all active:scale-90 border-2 ${
           isPlaying
-            ? 'bg-[#4A2E1B] text-[#E5C158] border-[#D4AF37] animate-pulse-glow'
+            ? 'bg-[#4A2E1B] text-[#E5C158] border-[#D4AF37]'
             : 'bg-[#F5EFE6] text-[#4A2E1B] border-[#B08968]'
         }`}
       >
         {isPlaying ? (
-          <Volume2 className="w-5 h-5 animate-bounce" />
+          <Volume2 className="w-5 h-5 animate-pulse" />
         ) : (
           <VolumeX className="w-5 h-5 opacity-70" />
         )}

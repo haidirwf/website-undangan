@@ -8,6 +8,7 @@ import { LocationSection } from './components/LocationSection';
 import { GiftSection } from './components/GiftSection';
 import { RsvpSection } from './components/RsvpSection';
 import { FooterSection } from './components/FooterSection';
+import { FloatingAudioButton } from './components/FloatingAudioButton';
 
 export const App: React.FC = () => {
   const [isCoverOpen, setIsCoverOpen] = useState(true);
@@ -98,6 +99,9 @@ export const App: React.FC = () => {
 
         {/* Footer */}
         <FooterSection />
+
+        {/* Tombol Kontrol Musik Mengambang */}
+        {!isCoverOpen && <FloatingAudioButton />}
       </main>
     </div>
   );
