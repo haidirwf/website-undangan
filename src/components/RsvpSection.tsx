@@ -172,12 +172,12 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ initialGuestName = '' 
             <label className="block text-[11px] font-sans font-semibold text-[#4A2E1B] uppercase tracking-wider mb-1.5">
               Konfirmasi Kehadiran <span className="text-red-600">*</span>
             </label>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 gap-2.5">
               {/* Tombol Hadir (Hijau Halus) */}
               <button
                 type="button"
                 onClick={() => setAttendance('Hadir')}
-                className={`py-2.5 px-1 text-center rounded-xl text-xs font-sans transition-all border ${
+                className={`py-2.5 px-2 text-center rounded-xl text-xs font-sans transition-all border ${
                   attendance === 'Hadir'
                     ? 'bg-[#2D6A4F] text-white border-[#2D6A4F] font-semibold shadow-sm'
                     : 'bg-[#EAF5EE] text-[#225732] border-[#B7E4C7] hover:bg-[#D8EFE0]'
@@ -190,26 +190,13 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ initialGuestName = '' 
               <button
                 type="button"
                 onClick={() => setAttendance('Tidak Hadir')}
-                className={`py-2.5 px-1 text-center rounded-xl text-xs font-sans transition-all border ${
+                className={`py-2.5 px-2 text-center rounded-xl text-xs font-sans transition-all border ${
                   attendance === 'Tidak Hadir'
                     ? 'bg-[#A33B3B] text-white border-[#A33B3B] font-semibold shadow-sm'
                     : 'bg-[#FDF0F0] text-[#8C2B2B] border-[#F8C8C8] hover:bg-[#FBE4E4]'
                 }`}
               >
                 Tidak Hadir
-              </button>
-
-              {/* Tombol Masih Ragu */}
-              <button
-                type="button"
-                onClick={() => setAttendance('Ragu')}
-                className={`py-2.5 px-1 text-center rounded-xl text-xs font-sans transition-all border ${
-                  attendance === 'Ragu'
-                    ? 'bg-[#8C6D46] text-white border-[#8C6D46] font-semibold shadow-sm'
-                    : 'bg-[#FAF3E8] text-[#7A5626] border-[#E0D0B6] hover:bg-[#F0E4D0]'
-                }`}
-              >
-                Masih Ragu
               </button>
             </div>
           </div>

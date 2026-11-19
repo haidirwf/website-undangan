@@ -4,7 +4,7 @@ import { JasmineDivider, CornerOrnament } from './ornaments/JavaneseOrnaments';
 
 export const DresscodeSection: React.FC = () => {
   return (
-    <section className="relative w-full py-10 px-6 flex flex-col items-center bg-[#FAF6F0] border-t border-[#B08968]/20 overflow-hidden">
+    <section className="relative w-full py-10 px-6 flex flex-col items-center bg-[#F5EFE6] border-t border-[#B08968]/20 overflow-hidden">
       <div className="z-10 w-full max-w-[370px] text-center">
         {/* Section Heading */}
         <motion.div
@@ -28,7 +28,7 @@ export const DresscodeSection: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
-          className="relative bg-[#F5EFE6] border border-[#B08968]/40 rounded-2xl p-5 shadow-sm text-center"
+          className="relative bg-[#FAF6F0] border border-[#B08968]/40 rounded-2xl p-5 shadow-sm text-center"
         >
           {/* Corner Ornaments */}
           <div className="absolute top-2 left-2 pointer-events-none">
@@ -44,7 +44,7 @@ export const DresscodeSection: React.FC = () => {
             <CornerOrnament position="bottom-right" size={24} />
           </div>
 
-          <div className="inline-block bg-[#FAF6F0] border border-[#D4AF37] px-4 py-1.5 rounded-full shadow-xs mb-3">
+          <div className="inline-block bg-[#F5EFE6] border border-[#D4AF37] px-4 py-1.5 rounded-full shadow-xs mb-3">
             <span className="text-xs sm:text-sm font-serif font-bold text-[#4A2E1B] tracking-wide">
               Batik / Nuansa Tradisional Jawa
             </span>

@@ -4,7 +4,6 @@ import { HeroSection } from './components/HeroSection';
 import { GreetingSection } from './components/GreetingSection';
 import { RundownSection } from './components/RundownSection';
 import { DresscodeSection } from './components/DresscodeSection';
-import { GallerySection } from './components/GallerySection';
 import { LocationSection } from './components/LocationSection';
 import { GiftSection } from './components/GiftSection';
 import { RsvpSection } from './components/RsvpSection';
@@ -87,9 +86,6 @@ export const App: React.FC = () => {
 
         {/* Tata Busana / Dress Code Jawa */}
         <DresscodeSection />
-
-        {/* Galeri Foto */}
-        <GallerySection />
 
         {/* Lokasi Acara (Google Maps) */}
         <LocationSection />
